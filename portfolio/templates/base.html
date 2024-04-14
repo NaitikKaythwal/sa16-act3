@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevPortfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" data-turbo-track="reload">
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Developer Portfolio App</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'work' %}">Work</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+  <footer>
+    <p><a href="mailto:nkythwal@memphis.edu" class="contact-link">nkythwal@memphis.edu</a>
+      <a href="https://www.instagram.com/_.naitikk._" class="contact-link">Instagram</a>
+      <a href="https://github.com/NaitikKaythwal/" class="contact-link">Github</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
